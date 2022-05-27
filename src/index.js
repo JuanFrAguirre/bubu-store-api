@@ -17,7 +17,7 @@ app.get('/api/products/:id', (req, res) => {
 
   const product = products.find((product) => product.id === id)
 
-  if (!product) res.sendStatus(401)
+  if (!product) res.sendStatus(404)
   res.send(product)
 })
 
